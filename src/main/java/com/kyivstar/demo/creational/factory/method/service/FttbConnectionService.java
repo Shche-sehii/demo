@@ -13,7 +13,7 @@ public class FttbConnectionService extends NewConnectionService {
 
     @Lookup
     @Override
-    protected FttbConnectionRequest createRequest() {
+    public FttbConnectionRequest createRequest() {
         return null;
     }
 

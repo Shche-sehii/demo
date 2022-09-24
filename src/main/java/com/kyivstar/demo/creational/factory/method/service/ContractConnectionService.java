@@ -13,7 +13,7 @@ public class ContractConnectionService extends NewConnectionService {
 
     @Lookup
     @Override
-    protected ContractConnectionRequest createRequest() {
+    public ContractConnectionRequest createRequest() {
         return null;
     }
 

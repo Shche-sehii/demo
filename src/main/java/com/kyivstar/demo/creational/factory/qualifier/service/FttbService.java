@@ -13,9 +13,11 @@ public class FttbService implements NewSubscriptionService {
 
     @Override
     public void createSubscription(IdentityCard identityCard) {
-        fttbConnectionDeliveryService.send(FttbConnectionRequest.builder()
+        FttbConnectionRequest request = FttbConnectionRequest.builder()
                 .lastName(identityCard.getLastName())
                 .firstName(identityCard.getFirstName())
-                .address(identityCard.getAddress()).build());
+                .address(identityCard.getAddress()).build();
+
+        fttbConnectionDeliveryService.send(request);
     }
 }

@@ -13,10 +13,12 @@ public class ContractService implements NewSubscriptionService {
 
     @Override
     public void createSubscription(IdentityCard identityCard) {
-        contractConnectionDeliveryService.send(ContractConnectionRequest.builder()
+        ContractConnectionRequest request = ContractConnectionRequest.builder()
                 .lastName(identityCard.getLastName())
                 .firstName(identityCard.getFirstName())
                 .serialNumber(identityCard.getSerialNumber())
-                .build());
+                .build();
+
+        contractConnectionDeliveryService.send(request);
     }
 }
