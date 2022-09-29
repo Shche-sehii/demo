@@ -4,6 +4,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
+import com.kyivstar.demo.creational.factory.domain.ConnectionType;
 import com.kyivstar.demo.creational.factory.domain.TestIdCard;
 import com.kyivstar.demo.creational.factory.simple.request.ContractConnectionRequest;
 import com.kyivstar.demo.creational.factory.simple.request.FttbConnectionRequest;
@@ -17,7 +18,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class NewConnectionServiceImplUnitTest {
+class NewConnectionServiceImplUnitTest {
 
     @InjectMocks
     private NewConnectionServiceImpl newConnectionService;
@@ -30,7 +31,7 @@ public class NewConnectionServiceImplUnitTest {
 
     @Test
     void whenContract_thenUseContractDeliveryService() {
-        newConnectionService.execute(TestIdCard.getIdCard(), "contract");
+        newConnectionService.execute(TestIdCard.getIdCard(), ConnectionType.CONTRACT);
 
         verify(contractConnectionDeliveryService).send(ContractConnectionRequest.builder().build());
         verify(fttbConnectionDeliveryService, never()).send(any());
@@ -38,7 +39,7 @@ public class NewConnectionServiceImplUnitTest {
 
     @Test
     void whenFttb_thenUseFttbDeliveryService() {
-        newConnectionService.execute(TestIdCard.getIdCard(), "fttb");
+        newConnectionService.execute(TestIdCard.getIdCard(), ConnectionType.FTTB);
 
         verify(contractConnectionDeliveryService, never()).send(any());
         verify(fttbConnectionDeliveryService).send(FttbConnectionRequest.builder().build());
