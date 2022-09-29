@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ContractService implements NewSubscriptionService {
+public class ContractConnectionService implements NewConnectionService {
 
     private final ContractConnectionDeliveryService contractConnectionDeliveryService;
 

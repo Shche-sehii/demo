@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class FttbService implements NewSubscriptionService {
+public class FttbConnectionService implements NewConnectionService {
 
     private final FttbConnectionDeliveryService fttbConnectionDeliveryService;
 
