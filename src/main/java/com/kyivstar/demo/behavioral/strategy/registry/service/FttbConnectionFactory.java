@@ -2,6 +2,7 @@ package com.kyivstar.demo.behavioral.strategy.registry.service;
 
 import com.kyivstar.demo.behavioral.strategy.registry.request.ConnectionRequest;
 import com.kyivstar.demo.behavioral.strategy.registry.request.FttbConnectionRequest;
+import com.kyivstar.demo.behavioral.strategy.setter.domain.ConnectionType;
 import com.kyivstar.demo.creational.factory.domain.IdentityCard;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -24,5 +25,10 @@ public class FttbConnectionFactory implements ConnectionFactory {
     @Override
     public ConnectionDeliveryService getService() {
         return fttbConnectionDeliveryService;
+    }
+
+    @Override
+    public ConnectionType getConnectionType() {
+        return ConnectionType.FTTB;
     }
 }

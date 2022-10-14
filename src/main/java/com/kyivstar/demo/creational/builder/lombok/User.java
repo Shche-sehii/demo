@@ -5,11 +5,11 @@ import lombok.Builder;
 @Builder
 public class User {
 
-    private String firstName;
-    private String lastName;
-    private String login;
-    private String address;
-    private String status;
-    private String contactNumber;
-    private String email;
+    private final String firstName;
+    private final String lastName;
+    private final String login;
+    private final String address;
+    private final String status;
+    private final String contactNumber;
+    private final String email;
 }

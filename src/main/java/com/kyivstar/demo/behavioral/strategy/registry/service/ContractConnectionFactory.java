@@ -2,6 +2,7 @@ package com.kyivstar.demo.behavioral.strategy.registry.service;
 
 import com.kyivstar.demo.behavioral.strategy.registry.request.ConnectionRequest;
 import com.kyivstar.demo.behavioral.strategy.registry.request.ContractConnectionRequest;
+import com.kyivstar.demo.behavioral.strategy.setter.domain.ConnectionType;
 import com.kyivstar.demo.creational.factory.domain.IdentityCard;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -35,5 +36,10 @@ public class ContractConnectionFactory implements ConnectionFactory {
 
     private boolean isContractConnectionsLimitReached(String serialNumber) {
         return "AA1234".equals(serialNumber);
+    }
+
+    @Override
+    public ConnectionType getConnectionType() {
+        return ConnectionType.CONTRACT;
     }
 }
