@@ -1,6 +1,6 @@
 package com.kyivstar.demo.creational.factory.strategy.service;
 
-import com.kyivstar.demo.creational.factory.domain.ConnectionType;
+import com.kyivstar.demo.domain.ConnectionType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

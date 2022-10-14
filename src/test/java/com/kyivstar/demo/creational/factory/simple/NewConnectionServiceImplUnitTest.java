@@ -4,8 +4,8 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
-import com.kyivstar.demo.creational.factory.domain.ConnectionType;
-import com.kyivstar.demo.creational.factory.domain.TestIdCard;
+import com.kyivstar.demo.domain.ConnectionType;
+import com.kyivstar.demo.domain.TestIdCard;
 import com.kyivstar.demo.creational.factory.simple.request.ContractConnectionRequest;
 import com.kyivstar.demo.creational.factory.simple.request.FttbConnectionRequest;
 import com.kyivstar.demo.creational.factory.simple.service.ContractConnectionDeliveryService;

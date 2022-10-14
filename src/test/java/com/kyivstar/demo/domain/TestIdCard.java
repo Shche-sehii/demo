@@ -1,4 +1,4 @@
-package com.kyivstar.demo.creational.factory.domain;
+package com.kyivstar.demo.domain;
 
 import lombok.experimental.UtilityClass;
 

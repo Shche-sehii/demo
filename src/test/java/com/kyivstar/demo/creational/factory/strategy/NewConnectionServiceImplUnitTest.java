@@ -3,9 +3,9 @@ package com.kyivstar.demo.creational.factory.strategy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.kyivstar.demo.creational.factory.domain.ConnectionType;
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
-import com.kyivstar.demo.creational.factory.domain.TestIdCard;
+import com.kyivstar.demo.domain.ConnectionType;
+import com.kyivstar.demo.domain.IdentityCard;
+import com.kyivstar.demo.domain.TestIdCard;
 import com.kyivstar.demo.creational.factory.strategy.request.ConnectionRequest;
 import com.kyivstar.demo.creational.factory.strategy.service.ConnectionDeliveryService;
 import com.kyivstar.demo.creational.factory.strategy.service.ConnectionFactory;

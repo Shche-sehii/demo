@@ -1,6 +1,6 @@
 package com.kyivstar.demo.creational.factory.qualifier.service;
 
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
+import com.kyivstar.demo.domain.IdentityCard;
 import com.kyivstar.demo.creational.factory.qualifier.request.ContractConnectionRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

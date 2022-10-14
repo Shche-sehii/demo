@@ -1,14 +1,13 @@
 package com.kyivstar.demo.behavioral.strategy.registry.service;
 
 import com.kyivstar.demo.behavioral.strategy.registry.request.ConnectionRequest;
-import com.kyivstar.demo.behavioral.strategy.setter.domain.ConnectionType;
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
+import com.kyivstar.demo.domain.ConnectionType;
+import com.kyivstar.demo.domain.IdentityCard;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
- * @author v.kostiukevych
- * date 16/09/2022
+ * @author v.kostiukevych date 16/09/2022
  */
 @Service
 @RequiredArgsConstructor

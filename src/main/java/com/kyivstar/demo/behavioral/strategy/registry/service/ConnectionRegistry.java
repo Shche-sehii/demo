@@ -1,6 +1,6 @@
 package com.kyivstar.demo.behavioral.strategy.registry.service;
 
-import com.kyivstar.demo.behavioral.strategy.setter.domain.ConnectionType;
+import com.kyivstar.demo.domain.ConnectionType;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.RequiredArgsConstructor;

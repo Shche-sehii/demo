@@ -1,7 +1,7 @@
 package com.kyivstar.demo.creational.factory.simple.service;
 
-import com.kyivstar.demo.creational.factory.domain.ConnectionType;
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
+import com.kyivstar.demo.domain.ConnectionType;
+import com.kyivstar.demo.domain.IdentityCard;
 
 import com.kyivstar.demo.creational.factory.simple.request.ContractConnectionRequest;
 import com.kyivstar.demo.creational.factory.simple.request.FttbConnectionRequest;

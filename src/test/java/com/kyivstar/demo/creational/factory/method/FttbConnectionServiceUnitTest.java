@@ -3,8 +3,8 @@ package com.kyivstar.demo.creational.factory.method;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
-import com.kyivstar.demo.creational.factory.domain.TestIdCard;
+import com.kyivstar.demo.domain.IdentityCard;
+import com.kyivstar.demo.domain.TestIdCard;
 import com.kyivstar.demo.creational.factory.method.request.FttbConnectionRequest;
 import com.kyivstar.demo.creational.factory.method.service.FttbConnectionService;
 import org.junit.jupiter.api.Test;

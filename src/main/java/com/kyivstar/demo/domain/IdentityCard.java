@@ -1,5 +1,6 @@
-package com.kyivstar.demo.creational.builder.domain;
+package com.kyivstar.demo.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 

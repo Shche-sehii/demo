@@ -1,6 +1,6 @@
 package com.kyivstar.demo.creational.factory.method.request;
 
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
+import com.kyivstar.demo.domain.IdentityCard;
 
 /**
  * @author v.kostiukevych

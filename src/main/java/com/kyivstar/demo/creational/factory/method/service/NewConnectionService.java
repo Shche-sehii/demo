@@ -1,6 +1,6 @@
 package com.kyivstar.demo.creational.factory.method.service;
 
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
+import com.kyivstar.demo.domain.IdentityCard;
 import com.kyivstar.demo.creational.factory.method.request.ConnectionRequest;
 import lombok.RequiredArgsConstructor;
 

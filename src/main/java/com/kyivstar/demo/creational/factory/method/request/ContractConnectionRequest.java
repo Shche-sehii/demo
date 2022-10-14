@@ -1,6 +1,6 @@
 package com.kyivstar.demo.creational.factory.method.request;
 
-import com.kyivstar.demo.creational.factory.domain.IdentityCard;
+import com.kyivstar.demo.domain.IdentityCard;
 import com.kyivstar.demo.creational.factory.method.service.ConnectionRequestDeliveryService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
