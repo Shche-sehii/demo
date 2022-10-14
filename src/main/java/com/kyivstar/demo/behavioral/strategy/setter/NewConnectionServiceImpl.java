@@ -1,11 +1,12 @@
 package com.kyivstar.demo.behavioral.strategy.setter;
 
+import com.kyivstar.demo.behavioral.strategy.setter.converter.ConversionService;
 import com.kyivstar.demo.behavioral.strategy.setter.request.ConnectionRequest;
+import com.kyivstar.demo.domain.ConnectionType;
 import com.kyivstar.demo.domain.IdentityCard;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
-import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,8 +20,8 @@ public class NewConnectionServiceImpl {
     private final ConversionService conversionService;
     private ConnectionDeliveryService deliveryService;
 
-    public void execute(IdentityCard idCard, String connectionType) {
-        ConnectionRequest request = conversionService.convert(idCard, ConnectionRequest.class);
+    public void execute(IdentityCard idCard, ConnectionType connectionType) {
+        ConnectionRequest request = conversionService.createRequest(connectionType, idCard);
         deliveryService.send(request);
     }
 
