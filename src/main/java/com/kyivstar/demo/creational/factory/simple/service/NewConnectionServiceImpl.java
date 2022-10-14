@@ -1,5 +1,6 @@
 package com.kyivstar.demo.creational.factory.simple.service;
 
+import com.kyivstar.demo.creational.factory.domain.ConnectionType;
 import com.kyivstar.demo.creational.factory.domain.IdentityCard;
 
 import com.kyivstar.demo.creational.factory.simple.request.ContractConnectionRequest;
@@ -19,14 +20,14 @@ public class NewConnectionServiceImpl {
 
     private final FttbConnectionDeliveryService fttbConnectionDeliveryService;
 
-    public void execute(IdentityCard idCard, String connectionType) {
-            if ("contract".equals(connectionType)) {
+    public void execute(IdentityCard idCard, ConnectionType connectionType) {
+            if (ConnectionType.CONTRACT.equals(connectionType)) {
                 verify(idCard);
                 final var request = ContractConnectionRequest.builder()
                         .build();
                 contractConnectionDeliveryService.send(request);
 
-            } else if ("fttb".equals(connectionType)) {
+            } else if (ConnectionType.FTTB.equals(connectionType)) {
                 final var request = FttbConnectionRequest.builder()
                         .build();
                 fttbConnectionDeliveryService.send(request);

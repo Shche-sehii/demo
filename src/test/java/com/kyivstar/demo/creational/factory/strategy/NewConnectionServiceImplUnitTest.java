@@ -3,6 +3,7 @@ package com.kyivstar.demo.creational.factory.strategy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import com.kyivstar.demo.creational.factory.domain.ConnectionType;
 import com.kyivstar.demo.creational.factory.domain.IdentityCard;
 import com.kyivstar.demo.creational.factory.domain.TestIdCard;
 import com.kyivstar.demo.creational.factory.strategy.request.ConnectionRequest;
@@ -17,9 +18,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class NewConnectionServiceImplUnitTest {
+class NewConnectionServiceImplUnitTest {
 
-    public static final String CONNECTION_TYPE = "connectionType";
+    public static final ConnectionType CONNECTION_TYPE = ConnectionType.CONTRACT;
     @InjectMocks
     private NewConnectionServiceImpl newConnectionService;
 
